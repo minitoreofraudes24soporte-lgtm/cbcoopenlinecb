@@ -1,8 +1,1086 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Refresh" content="0; url=https://bancopylogin.web.app">
-    <title>Redireccionando...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fernanda Portel Limberger | Sonorização e Iluminação</title>
+
+  <meta name="description" content="Site institucional de Fernanda Portel Limberger, empresa estabelecida em São Martinho da Serra, Rio Grande do Sul, com atividade de sonorização e iluminação.">
+
+  <meta name="theme-color" content="#101426">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #101426;
+      --bg-light: #171d34;
+      --primary: #7c5cff;
+      --secondary: #22d3ee;
+      --text: #f7f8ff;
+      --muted: #b5bdd3;
+      --border: rgba(255,255,255,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, .navbar-brand {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .navbar {
+      background: rgba(16, 20, 38, .94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(15px);
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -.4px;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 9px;
+      border-radius: 13px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      font-size: 1.35rem;
+    }
+
+    .navbar .nav-link {
+      color: #dce1f2;
+      font-size: .92rem;
+      margin: 0 7px;
+    }
+
+    .navbar .nav-link:hover {
+      color: var(--secondary);
+    }
+
+    .btn-gradient {
+      border: 0;
+      border-radius: 9px;
+      padding: 12px 21px;
+      background: linear-gradient(110deg, var(--primary), #5d9cff);
+      color: white;
+      font-weight: 700;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn-gradient:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(124,92,255,.25);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      padding: 130px 0 90px;
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(124,92,255,.22), transparent 40%),
+        radial-gradient(ellipse at 20% 80%, rgba(34,211,238,.11), transparent 40%),
+        var(--bg);
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      opacity: .16;
+      background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid rgba(34,211,238,.28);
+      border-radius: 30px;
+      background: rgba(34,211,238,.07);
+      color: #a5f3fc;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin: 25px 0;
+      font-size: clamp(2.5rem, 5.3vw, 4.8rem);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -2.4px;
+    }
+
+    .gradient-text {
+      color: #a99aff;
+      background: linear-gradient(100deg, #b7a6ff, #5ce7f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-orbit {
+      width: min(350px, 90%);
+      aspect-ratio: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,92,255,.17), rgba(16,20,38,.1) 65%);
+      box-shadow: 0 0 90px rgba(124,92,255,.12);
+    }
+
+    .visual-orbit::before,
+    .visual-orbit::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgba(34,211,238,.22);
+      border-radius: 50%;
+    }
+
+    .visual-orbit::before {
+      inset: 28px;
+    }
+
+    .visual-orbit::after {
+      inset: -24px;
+      border-color: rgba(124,92,255,.2);
+    }
+
+    .visual-icon {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 35px;
+      color: #fff;
+      background: linear-gradient(135deg, #7c5cff, #287de8);
+      box-shadow: 0 25px 70px rgba(124,92,255,.35);
+      font-size: 5rem;
+      transform: rotate(-7deg);
+    }
+
+    .floating-icon {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      color: var(--secondary);
+      background: #1b213b;
+      font-size: 1.6rem;
+      box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    }
+
+    .floating-one {
+      top: 22px;
+      right: 5px;
+    }
+
+    .floating-two {
+      bottom: 25px;
+      left: 0;
+      color: #c4b5fd;
+    }
+
+    .floating-three {
+      bottom: 45px;
+      right: 5px;
+      color: #fde68a;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--secondary);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 12px 0 20px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1.2px;
+    }
+
+    .section-description {
+      max-width: 720px;
+      color: var(--muted);
+    }
+
+    .about-panel {
+      height: 100%;
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+    }
+
+    .about-symbol {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      border-radius: 18px;
+      color: #c4b5fd;
+      background: rgba(124,92,255,.15);
+      font-size: 1.9rem;
+    }
+
+    .about-panel p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .feature-card {
+      height: 100%;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-light);
+      transition: border-color .25s, transform .25s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(34,211,238,.5);
+    }
+
+    .feature-icon {
+      color: var(--secondary);
+      font-size: 2rem;
+    }
+
+    .feature-card h3 {
+      margin: 17px 0 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .details-section {
+      background: #0c1020;
+    }
+
+    .details-box {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--bg-light);
+    }
+
+    .details-heading {
+      padding: 25px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .details-heading h3 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: minmax(140px, .8fr) 1.5fr;
+      gap: 20px;
+      padding: 17px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-label {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .detail-value {
+      overflow-wrap: anywhere;
+      color: #f7f8ff;
+      font-size: .93rem;
+      font-weight: 600;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #86efac;
+    }
+
+    .status::before {
+      width: 7px;
+      height: 7px;
+      content: "";
+      border-radius: 50%;
+      background: #4ade80;
+    }
+
+    .location-panel {
+      height: 100%;
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(124,92,255,.16), transparent 45%),
+        var(--bg-light);
+    }
+
+    .location-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border-radius: 17px;
+      color: var(--secondary);
+      background: rgba(34,211,238,.1);
+      font-size: 1.8rem;
+    }
+
+    .location-panel p {
+      color: var(--muted);
+    }
+
+    .cta-section {
+      padding: 75px 0;
+    }
+
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 55px;
+      border: 1px solid rgba(124,92,255,.4);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(34,211,238,.13), transparent 35%),
+        linear-gradient(120deg, rgba(124,92,255,.15), rgba(23,29,52,.85));
+    }
+
+    .cta-panel h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+    }
+
+    .cta-panel p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+      background: #0c1020;
+    }
+
+    .footer-text {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .back-top {
+      position: fixed;
+      z-index: 1000;
+      right: 20px;
+      bottom: 20px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), #398de8);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        min-height: auto;
+        padding-top: 125px;
+      }
+
+      .hero-visual {
+        min-height: 350px;
+        margin-top: 25px;
+      }
+
+      .navbar .nav-link {
+        margin: 5px 0;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero h1 {
+        letter-spacing: -1.4px;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .visual-orbit {
+        width: 260px;
+      }
+
+      .visual-icon {
+        width: 115px;
+        height: 115px;
+        font-size: 3.8rem;
+      }
+
+      .floating-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+      }
+
+      .about-panel,
+      .location-panel {
+        padding: 25px;
+      }
+
+      .detail-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 15px 20px;
+      }
+
+      .details-heading {
+        padding: 22px 20px;
+      }
+
+      .cta-panel {
+        padding: 30px 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
+<body>
+
+  <!-- Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <span class="brand-icon">
+          <i class="bi bi-soundwave"></i>
+        </span>
+        <span>
+          Fernanda Portel Limberger
+          <small class="d-block fw-normal text-secondary"
+                 style="font-size:.7rem">
+            Sonorização e iluminação
+          </small>
+        </span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre a empresa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#atuacao">Área de atuação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#empresa">Dados cadastrais</a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn btn-gradient" href="#localizacao">
+              <i class="bi bi-geo-alt me-1"></i>
+              Localização
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Apresentação -->
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow">
+              <i class="bi bi-lightning-charge-fill"></i>
+              Apresentação institucional
+            </span>
+
+            <h1>
+              Som e luz em destaque.
+              <span class="gradient-text">
+                Tecnologia e expressão.
+              </span>
+            </h1>
+
+            <p class="hero-description">
+              Conheça a empresa Fernanda Portel Limberger, estabelecida
+              em São Martinho da Serra, no Rio Grande do Sul, com atividade
+              econômica de sonorização e iluminação.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#sobre" class="btn btn-gradient">
+                Conheça a empresa
+                <i class="bi bi-arrow-down-right ms-2"></i>
+              </a>
+
+              <a href="#empresa"
+                 class="btn btn-outline-light rounded-3 px-4 py-3">
+                Dados cadastrais
+              </a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-4 mt-5">
+              <div>
+                <div class="fw-bold fs-5">2017</div>
+                <div class="text-secondary small">Ano de fundação</div>
+              </div>
+
+              <div>
+                <div class="fw-bold fs-5">RS</div>
+                <div class="text-secondary small">Rio Grande do Sul</div>
+              </div>
+
+              <div>
+                <div class="fw-bold fs-5">Ativa</div>
+                <div class="text-secondary small">Situação informada</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-visual" aria-hidden="true">
+              <div class="visual-orbit">
+                <div class="visual-icon">
+                  <i class="bi bi-speaker-fill"></i>
+                </div>
+
+                <div class="floating-icon floating-one">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+
+                <div class="floating-icon floating-two">
+                  <i class="bi bi-soundwave"></i>
+                </div>
+
+                <div class="floating-icon floating-three">
+                  <i class="bi bi-stars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <span class="section-label">Sobre a empresa</span>
+            <h2 class="section-title">
+              Conheça Fernanda Portel Limberger
+            </h2>
+
+            <p class="section-description">
+              Uma apresentação institucional com informações de
+              identificação empresarial e sua área econômica de atuação,
+              conforme os dados cadastrais fornecidos.
+            </p>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="about-panel">
+              <div class="about-symbol">
+                <i class="bi bi-building"></i>
+              </div>
+
+              <h3 class="h4 fw-bold mb-3">
+                Identidade e atividade econômica
+              </h3>
+
+              <p>
+                A empresa 28.993.148 Fernanda Portel Limberger foi fundada
+                em 2 de novembro de 2017 e está localizada no município
+                de São Martinho da Serra, no estado do Rio Grande do Sul.
+                Sua atividade econômica principal está classificada no
+                CNAE 90.01-9-06, correspondente a atividades de
+                sonorização e de iluminação.
+              </p>
+
+              <p class="mt-3">
+                Esta página reúne os dados empresariais disponibilizados
+                para apresentação institucional, sem atribuir à empresa
+                serviços, contatos ou credenciais não confirmados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Área de atuação -->
+    <section class="section pt-0" id="atuacao">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Atividade econômica</span>
+          <h2 class="section-title">Sonorização e iluminação</h2>
+          <p class="section-description mx-auto">
+            A classificação econômica informada identifica o segmento
+            de atividade da empresa. Os itens abaixo apresentam aspectos
+            gerais desse segmento, não um catálogo de serviços confirmados.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-soundwave"></i>
+              </div>
+              <h3>Sonorização</h3>
+              <p>
+                Área relacionada ao som e aos recursos de áudio,
+                conforme a classificação econômica informada.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h3>Iluminação</h3>
+              <p>
+                Área relacionada aos recursos de iluminação, de acordo
+                com a atividade econômica cadastrada.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-card-checklist"></i>
+              </div>
+              <h3>Informações empresariais</h3>
+              <p>
+                Consulta aos dados de identificação e à classificação
+                econômica informada para a empresa.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 text-secondary small">
+          <i class="bi bi-info-circle me-1"></i>
+          A disponibilidade de equipamentos, locação, montagem,
+          atendimento a eventos ou outros serviços deve ser confirmada
+          diretamente com a empresa antes de ser divulgada.
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados cadastrais -->
+    <section class="section details-section" id="empresa">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <span class="section-label">Cadastro empresarial</span>
+            <h2 class="section-title">
+              Informações da empresa
+            </h2>
+            <p class="section-description">
+              Dados apresentados conforme as informações fornecidas
+              para a elaboração deste site institucional.
+            </p>
+
+            <div class="mt-4">
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <i class="bi bi-patch-check fs-3"
+                   style="color:var(--secondary)"></i>
+                <div>
+                  <h3 class="h6 fw-bold">Identificação cadastral</h3>
+                  <p class="text-secondary small mb-0">
+                    Razão social e CNPJ informados.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <i class="bi bi-calendar-event fs-3"
+                   style="color:var(--secondary)"></i>
+                <div>
+                  <h3 class="h6 fw-bold">Fundação</h3>
+                  <p class="text-secondary small mb-0">
+                    2 de novembro de 2017.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <i class="bi bi-geo-alt fs-3"
+                   style="color:var(--secondary)"></i>
+                <div>
+                  <h3 class="h6 fw-bold">Município</h3>
+                  <p class="text-secondary small mb-0">
+                    São Martinho da Serra, Rio Grande do Sul.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="details-box">
+              <div class="details-heading">
+                <h3>
+                  <i class="bi bi-file-earmark-text me-2"
+                     style="color:var(--secondary)"></i>
+                  Dados cadastrais informados
+                </h3>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Nome empresarial</div>
+                <div class="detail-value">
+                  28.993.148 Fernanda Portel Limberger
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">CNPJ</div>
+                <div class="detail-value">28.993.148/0001-93</div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Data de abertura</div>
+                <div class="detail-value">02/11/2017</div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Situação cadastral</div>
+                <div class="detail-value">
+                  <span class="status">Ativa, conforme informado</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Atividade principal</div>
+                <div class="detail-value">
+                  CNAE 90.01-9-06 — Atividades de sonorização e de iluminação
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Município</div>
+                <div class="detail-value">São Martinho da Serra</div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Estado</div>
+                <div class="detail-value">Rio Grande do Sul (RS)</div>
+              </div>
+            </div>
+
+            <p class="text-secondary small mt-3">
+              Os dados cadastrais devem ser conferidos com os registros
+              oficiais antes da publicação definitiva.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="section" id="localizacao">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6">
+            <div class="location-panel">
+              <div class="location-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+
+              <span class="section-label">Localização municipal</span>
+              <h2 class="section-title fs-2">
+                São Martinho da Serra — RS
+              </h2>
+
+              <p>
+                A empresa está associada ao município de São Martinho
+                da Serra, no Rio Grande do Sul. O endereço completo
+                não foi informado e, por isso, não é exibido nesta página.
+              </p>
+
+              <a
+                class="btn btn-gradient mt-3"
+                href="https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Martinho+da+Serra%2C+RS"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-map me-2"></i>
+                Ver município no mapa
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="location-panel d-flex flex-column justify-content-center">
+              <div class="location-icon">
+                <i class="bi bi-info-circle"></i>
+              </div>
+
+              <h3 class="h4 fw-bold mb-3">
+                Informações e contato
+              </h3>
+
+              <p>
+                Este site apresenta informações institucionais e
+                cadastrais fornecidas sobre a empresa.
+              </p>
+
+              <p>
+                Telefone, e-mail, endereço detalhado e canais oficiais
+                de atendimento não foram disponibilizados para esta
+                página e, por isso, não são exibidos.
+              </p>
+
+              <div class="mt-2 text-secondary small">
+                <i class="bi bi-shield-check me-2"></i>
+                Informações apresentadas com foco em clareza e
+                identificação empresarial.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Encerramento -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <span class="section-label">Apresentação institucional</span>
+              <h2 class="mt-3 mb-3">
+                Fernanda Portel Limberger
+              </h2>
+              <p>
+                Informações empresariais de uma atividade econômica
+                relacionada à sonorização e à iluminação em
+                São Martinho da Serra, Rio Grande do Sul.
+              </p>
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+              <a href="#inicio" class="btn btn-gradient">
+                Voltar ao início
+                <i class="bi bi-arrow-up-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-7">
+          <a href="#inicio"
+             class="navbar-brand d-inline-flex align-items-center">
+            <span class="brand-icon">
+              <i class="bi bi-soundwave"></i>
+            </span>
+            Fernanda Portel Limberger
+          </a>
+
+          <p class="footer-text mt-3 mb-0">
+            CNPJ 28.993.148/0001-93
+          </p>
+        </div>
+
+        <div class="col-md-5 text-md-end">
+          <p class="footer-text mb-1">
+            São Martinho da Serra — RS
+          </p>
+          <p class="footer-text mb-0">
+            CNAE 90.01-9-06
+          </p>
+          <p class="footer-text mt-3 mb-0">
+            &copy; <span id="anoAtual"></span>
+            Fernanda Portel Limberger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <a href="#inicio"
+     class="back-top"
+     aria-label="Voltar ao início"
+     title="Voltar ao início">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById("anoAtual").textContent =
+      new Date().getFullYear();
+
+    // Fecha o menu móvel após selecionar uma seção.
+    document.querySelectorAll("#menuPrincipal .nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        const menu = document.getElementById("menuPrincipal");
+
+        if (menu.classList.contains("show")) {
+          bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>
